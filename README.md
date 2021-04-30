@@ -17,18 +17,23 @@
 2. Персонажи
 
 А) Для начала необходимо нарисовать всех персонажей на бумаге или в графическом редакторе!
+
 ![image](https://user-images.githubusercontent.com/82133984/116693114-e1200680-a9d6-11eb-8356-e289b779db62.png)
-
+---
 Б) Координаты
+
 ![image](https://user-images.githubusercontent.com/82133984/116693714-bf734f00-a9d7-11eb-98e7-9b0b1c95a44c.png)
-
+---
 В) Нарисовать на языке С++
+
 ![image](https://user-images.githubusercontent.com/82133984/116693790-d3b74c00-a9d7-11eb-94a6-10e013dca4a6.png)
-
+---
 Г) Разбиение на функции
-![image](https://user-images.githubusercontent.com/82133984/116693955-0d885280-a9d8-11eb-808d-0bc57699526e.png)
 
+![image](https://user-images.githubusercontent.com/82133984/116693955-0d885280-a9d8-11eb-808d-0bc57699526e.png)
+---
 Д) Введение переменных
+
 ![image](https://user-images.githubusercontent.com/82133984/116694185-648e2780-a9d8-11eb-89ac-b43e9c8afc0f.png)
 
 3. Сцены
