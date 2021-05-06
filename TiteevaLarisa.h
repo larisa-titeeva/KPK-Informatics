@@ -1,3 +1,33 @@
+//{=============================================================================
+//!@brief  Function library
+//!        the first function library on C++
+//!@author Larisa Titeeva,
+//!        sity Megion, Gimnasium 5
+//!@date   2021
+//!
+//!@mainpage
+//!
+//!    ‘ункции:
+//!        - @ref CarrotDraw()
+//!        - @ref MountainDraw()
+//!        - @ref FlowerDraw()
+//!        - @ref SunDraw()
+//!        - @ref StarDraw()
+//!        - @ref SquirrelDraw()
+//!        - @ref FoxDraw()
+//!        - @ref FirDraw()
+//!        - @ref BirdDraw()
+//!        - @ref HareDraw()
+//!        - @ref OwlDraw()
+//!
+//!@note           аждому, кто хочет достичь успеха в программировании, нужно понимать, что технологи€ осваиваетс€ ни за неделю.
+//!               Ќо, чтобы начать понимать и разбиратьс€ в его основах, не нужно ничего, кроме желани€!
+//!
+//!@image
+//!
+//}=============================================================================
+
+
 #include "TXLib.h"
 
 void CarrotDraw     (int x, int y);
