@@ -1,11 +1,11 @@
 //{=============================================================================
-//!@brief  Function library
-//!        the first function library on C++
-//!@author Larisa Titeeva,
-//!        sity Megion, Gimnasium 5
-//!@date   2021
+//! @brief     Function library
+//!            the first function library on C++
+//! @author    Larisa Titeeva,
+//!            sity Megion, Gimnasium 5
+//! @date      2021
 //!
-//!@mainpage
+//! @mainpage
 //!
 //!    Функции:
 //!        - @ref CarrotDraw()
@@ -20,10 +20,10 @@
 //!        - @ref HareDraw()
 //!        - @ref OwlDraw()
 //!
-//!@note          Каждому, кто хочет достичь успеха в программировании, нужно понимать, что технология осваивается ни за неделю.
-//!               Но, чтобы начать понимать и разбираться в его основах, не нужно ничего, кроме желания!
+//! @note       Каждому, кто хочет достичь успеха в программировании, нужно понимать, что технология осваивается ни за неделю.
+//!            Но, чтобы начать понимать и разбираться в его основах, не нужно ничего, кроме желания!
 //!
-//!@image
+//! @image html Episode1.png
 //!
 //}=============================================================================
 
@@ -53,9 +53,9 @@ void OwlDraw        (int x, int y, double Size,  int EyesWidth, int EyesMove, in
 //-----------------------------------------------------------------------------
 //! Рисование горы
 //!
-//! @param x       x - координата левого нижнего угла
-//! @param y       y - координата левого нижнего угла
-//! @param Size    Size - размер горы
+//! @param x       - координата левого нижнего угла
+//! @param y       - координата левого нижнего угла
+//! @param Size    - размер горы
 //!
 //! @par        <b> Пример использования </b>
 //! @code
@@ -102,13 +102,14 @@ void MountainDraw  (int x, int y, double Size)
 //!
 //! @param x              x - координата центра звезды
 //! @param y              y - координата центра звезды
-//! @param StarFlicker    StarFlicker - изменение размера звезды (мерцание)
+//! @param StarFlicker    изменение размера звезды (мерцание)
 //!
 //! @par        <b> Пример использования </b>
 //! @code
 //!          StarDraw (30, 30, 0.5)
 //! @endcode
 //-----------------------------------------------------------------------------
+
 void StarDraw      (int x, int y, double StarFlicker)
     {
     txSetColor     (TX_YELLOW);
@@ -125,6 +126,20 @@ void StarDraw      (int x, int y, double StarFlicker)
                     {ROUND (x -  5*StarFlicker), ROUND (y - 5*StarFlicker)}};
     txPolygon      (star, 10);
     }
+
+//-----------------------------------------------------------------------------
+//! Рисование цветов
+//!
+//! @param x              x - координата центра цветка
+//! @param y              y - координата центра цветка
+//! @param Size           размер цветов
+//! @param petalColor     цвет лепестков
+//!
+//! @par        <b> Пример использования </b>
+//! @code
+//!          FlowerDraw (30, 30, 0.5, )
+//! @endcode
+//-----------------------------------------------------------------------------
 
 void FlowerDraw    (int x, int y, double Size, COLORREF petalColor)
     {
@@ -147,6 +162,19 @@ void FlowerDraw    (int x, int y, double Size, COLORREF petalColor)
     txEllipse      (x -  7*Size,  y +  9*Size,  x +  7*Size,  y + 37*Size);
     }
 
+//-----------------------------------------------------------------------------
+//! Рисование солнца
+//!
+//! @param x              x - координата центра солнца
+//! @param y              y - координата центра солнца
+//! @param petalColor     цвет солнца (закат)
+//!
+//! @par        <b> Пример использования </b>
+//! @code
+//!          SunDraw (30, 30, )
+//! @endcode
+//-----------------------------------------------------------------------------
+
 void SunDraw       (int x, int y, COLORREF SunColor)
     {
     txSetColor     (SunColor);
@@ -165,6 +193,19 @@ void SunDraw       (int x, int y, COLORREF SunColor)
     txLine (x - 47, y + 40, x - 34, y + 17);
     txCircle (x, y, 25);
     }
+
+//-----------------------------------------------------------------------------
+//! Рисование птицы
+//!
+//! @param x              x - координата центра солнца
+//! @param y              y - координата центра солнца
+//! @param petalColor     цвет солнца (закат)
+//!
+//! @par        <b> Пример использования </b>
+//! @code
+//!          SunDraw (30, 30, )
+//! @endcode
+//-----------------------------------------------------------------------------
 
 void BirdDraw      (int x, int y, double SizeX, double SizeY, COLORREF bodyColor, COLORREF wingColor, int WingMove, int EyesBlink)
     {
@@ -217,6 +258,19 @@ void BirdDraw      (int x, int y, double SizeX, double SizeY, COLORREF bodyColor
     txCircle       (x + 66*SizeX, y - 32*SizeY, 8*SizeY*EyesBlink);
     }
 
+//-----------------------------------------------------------------------------
+//! Рисование белки
+//!
+//! @param x              x - координата центра солнца
+//! @param y              y - координата центра солнца
+//! @param petalColor     цвет солнца (закат)
+//!
+//! @par        <b> Пример использования </b>
+//! @code
+//!          SunDraw (30, 30, )
+//! @endcode
+//-----------------------------------------------------------------------------
+
 void SquirrelDraw  (int x, int y, double Size, int Whiskers, int TailWag)
     {
     txSetColor     (TX_BLACK);
@@ -255,6 +309,19 @@ void SquirrelDraw  (int x, int y, double Size, int Whiskers, int TailWag)
     txCircle       (x + 139*Size, y - 83*Size, 5*Size);
     txCircle       (x +  86*Size, y - 87*Size, 4*Size);
     }
+
+//-----------------------------------------------------------------------------
+//! Рисование зайчонка
+//!
+//! @param x              x - координата центра солнца
+//! @param y              y - координата центра солнца
+//! @param petalColor     цвет солнца (закат)
+//!
+//! @par        <b> Пример использования </b>
+//! @code
+//!          SunDraw (30, 30, )
+//! @endcode
+//-----------------------------------------------------------------------------
 
 void HareDraw      (int x, int y, double Size, int EarsDown, int NoseSniff, int HeadDown, COLORREF BodyColor, int Smile)
     {
@@ -300,6 +367,19 @@ void HareDraw      (int x, int y, double Size, int EarsDown, int NoseSniff, int 
     txCircle       (x + 13*Size,             y - (5 - HeadDown)*Size,             8*Size);
     txEllipse      (x- (5 + NoseSniff)*Size, y + (5 - NoseSniff + HeadDown)*Size, x + (5 + NoseSniff)*Size, y + (10 + NoseSniff + HeadDown)*Size);
     }
+
+//-----------------------------------------------------------------------------
+//! Рисование лисы
+//!
+//! @param x              x - координата центра солнца
+//! @param y              y - координата центра солнца
+//! @param petalColor     цвет солнца (закат)
+//!
+//! @par        <b> Пример использования </b>
+//! @code
+//!          SunDraw (30, 30, )
+//! @endcode
+//-----------------------------------------------------------------------------
 
 void FoxDraw        (int x, int y, int NoseSniff, int HeadDown, int TailDown, int StepPaw)
     {
@@ -349,6 +429,19 @@ void FoxDraw        (int x, int y, int NoseSniff, int HeadDown, int TailDown, in
 
     }
 
+//-----------------------------------------------------------------------------
+//! Рисование морковки
+//!
+//! @param x              x - координата центра солнца
+//! @param y              y - координата центра солнца
+//! @param petalColor     цвет солнца (закат)
+//!
+//! @par        <b> Пример использования </b>
+//! @code
+//!          SunDraw (30, 30, )
+//! @endcode
+//-----------------------------------------------------------------------------
+
 void CarrotDraw     (int x, int y)
     {
     txSetColor      (TX_ORANGE);
@@ -365,6 +458,22 @@ void CarrotDraw     (int x, int y)
     txLine          (x + 67, y - 17, x + 45, y - 20);
     txLine          (x + 67, y - 17, x + 30, y - 15);
     }
+
+//-----------------------------------------------------------------------------
+//! Рисование ёлочки
+//! <table>
+//! <tr><td> @image html Fir.png</td>
+//! <td>
+//! @param x              x - координата центра солнца
+//! @param y              y - координата центра солнца
+//! @param petalColor     цвет солнца (закат)</td></tr>
+//! </table>
+//!
+//! @par        <b> Пример использования </b>
+//! @code
+//!          SunDraw (30, 30, )
+//! @endcode
+//-----------------------------------------------------------------------------
 
 void FirDraw        (int x, int y, double Size, int WidthFir, int WindBlows, double WidthTrunk)
     {
@@ -393,6 +502,19 @@ void FirDraw        (int x, int y, double Size, int WidthFir, int WindBlows, dou
                     {ROUND (x - 37*Size - WidthTrunk), ROUND (y + 369*Size)} };
     txPolygon       (fir4, 4);
     }
+
+//-----------------------------------------------------------------------------
+//! Рисование совы
+//!
+//! @param x              x - координата центра солнца
+//! @param y              y - координата центра солнца
+//! @param petalColor     цвет солнца (закат)
+//!
+//! @par        <b> Пример использования </b>
+//! @code
+//!          SunDraw (30, 30, )
+//! @endcode
+//-----------------------------------------------------------------------------
 
 void OwlDraw        (int x, int y, double Size, int EyesWidth, int EyesMove, int NeckUp, int WindBlows, int MouthOpen, int FlapWing, COLORREF EyesColor = TX_WHITE)
     {
