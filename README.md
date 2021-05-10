@@ -41,5 +41,6 @@
 ![image](https://user-images.githubusercontent.com/82133984/114868355-3bce3580-9e0f-11eb-9e6e-8628cee70e7e.png)
 
 4. Анимация
+
 ![анимация](https://user-images.githubusercontent.com/82133984/117709705-aeea8200-b1ea-11eb-85e1-ee9594cb2d29.gif)
 
