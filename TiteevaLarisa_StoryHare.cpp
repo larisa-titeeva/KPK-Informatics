@@ -15,23 +15,7 @@ void BackgroundDraw_Summer (int x, int y);
 void BackgroundDraw_Night  (int x, int y);
 void BackgroundDraw_Autumn (int x, int y);
 void BackgroundDraw_Winter (int x, int y);
-void CarrotDraw     (int x, int y);
-void MountainDraw   (int x, int y, double Size);
-void FlowerDraw     (int x, int y, double Size, COLORREF petalColor);
-void SunDraw        (int x, int y, COLORREF SunColor);
-void StarDraw       (int x, int y, double StarFlicker);
-void SquirrelDraw   (int x, int y, double Size,  int Whiskers, int TailWag);
-void FoxDraw        (int x, int y, int NoseSniff, int HeadDown, int TailDown, int StepPaw);
-void FirDraw        (int x, int y, double Size,  int WidthFir, int WindBlows, double WidthTrunk);
 
-void BirdDraw       (int x, int y, double SizeX, double SizeY, COLORREF bodyColor,
-                     COLORREF wingColor, int WingMove, int EyesBlink);
-
-void HareDraw       (int x, int y, double Size,  int EarsDown, int NoseSniff,
-                     int HeadDown, COLORREF BodyColor, int Smile);
-
-void OwlDraw        (int x, int y, double Size,  int EyesWidth, int EyesMove, int NeckUp,
-                     int WindBlows, int MouthOpen, int FlapWing, COLORREF EyesColor);
 
 int main()
     {
@@ -108,7 +92,7 @@ void EpisodeTwo   ()
         FlowerDraw     (400, 500, 0.72, RGB (100, 100, 100));
         FlowerDraw     ( 40, 340, 0.24, RGB (200, 100,   0));
 
-        SquirrelDraw   (480 + t/400 * 200, 420 - t/200 * 150, 0.5, (t / 12 % 10) - 5, 0);
+        SquirrelDraw   (480 + t/400 * 200, 420 - t/200 * 150, 0.5, (t / 12 % 10) - 5, t/10 % 2);
 
         HareDraw       (480, 480, 0.5, 40, (t/20) % 2 * 4, 0, TX_LIGHTGRAY, 0);
 

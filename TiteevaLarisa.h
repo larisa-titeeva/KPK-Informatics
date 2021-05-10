@@ -52,10 +52,13 @@ void OwlDraw        (int x, int y, double Size,  int EyesWidth, int EyesMove, in
 
 //-----------------------------------------------------------------------------
 //! Рисование горы
-//!
+//! <table>
+//! <tr><td> @image html Mountain.png</td>
+//! <td>
 //! @param x       - координата левого нижнего угла
 //! @param y       - координата левого нижнего угла
-//! @param Size    - размер горы
+//! @param Size    - размер горы</td></tr>
+//! </table>
 //!
 //! @par        <b> Пример использования </b>
 //! @code
@@ -99,10 +102,13 @@ void MountainDraw  (int x, int y, double Size)
 
 //-----------------------------------------------------------------------------
 //! Рисование звезды
-//!
+//! <table>
+//! <tr><td> @image html Star.png</td>
+//! <td>
 //! @param x              x - координата центра звезды
 //! @param y              y - координата центра звезды
-//! @param StarFlicker    изменение размера звезды (мерцание)
+//! @param StarFlicker    изменение размера звезды (мерцание)</td></tr>
+//! </table>
 //!
 //! @par        <b> Пример использования </b>
 //! @code
@@ -129,15 +135,18 @@ void StarDraw      (int x, int y, double StarFlicker)
 
 //-----------------------------------------------------------------------------
 //! Рисование цветов
-//!
+//! <table>
+//! <tr><td> @image html Flower.png</td>
+//! <td>
 //! @param x              x - координата центра цветка
 //! @param y              y - координата центра цветка
 //! @param Size           размер цветов
-//! @param petalColor     цвет лепестков
+//! @param petalColor     цвет лепестков</td></tr>
+//! </table>
 //!
 //! @par        <b> Пример использования </b>
 //! @code
-//!          FlowerDraw (30, 30, 0.5, )
+//!          FlowerDraw (30, 30, 0.5, RGB (200, 200, 200))
 //! @endcode
 //-----------------------------------------------------------------------------
 
@@ -164,14 +173,17 @@ void FlowerDraw    (int x, int y, double Size, COLORREF petalColor)
 
 //-----------------------------------------------------------------------------
 //! Рисование солнца
-//!
+//! <table>
+//! <tr><td> @image html Sun.png</td>
+//! <td>
 //! @param x              x - координата центра солнца
 //! @param y              y - координата центра солнца
-//! @param petalColor     цвет солнца (закат)
+//! @param petalColor     цвет солнца (закат)</td></tr>
+//! </table>
 //!
 //! @par        <b> Пример использования </b>
 //! @code
-//!          SunDraw (30, 30, )
+//!          SunDraw (30, 30, TX_YELLOW)
 //! @endcode
 //-----------------------------------------------------------------------------
 
@@ -196,14 +208,22 @@ void SunDraw       (int x, int y, COLORREF SunColor)
 
 //-----------------------------------------------------------------------------
 //! Рисование птицы
-//!
-//! @param x              x - координата центра солнца
-//! @param y              y - координата центра солнца
-//! @param petalColor     цвет солнца (закат)
+//! <table>
+//! <tr><td> @image html Bird.png</td>
+//! <td>
+//! @param x              x - координата центра туловища птицы
+//! @param y              y - координата центра туловища птицы
+//! @param SizeX          размер птицы по оси X
+//! @param SizeY          размер птицы по оси Y
+//! @param bodyColor      цвет туловища и головы
+//! @param wingyColor     цвет крыльев и хвоста
+//! @param WingMove       положение крыльев (для взмахов)
+//! @param EyesBlink      открытие/закрытие глаз (для моргания)</td></tr>
+//! </table>
 //!
 //! @par        <b> Пример использования </b>
 //! @code
-//!          SunDraw (30, 30, )
+//!          BirdDraw (200, 100, 1, 1, RGB (150, 100, 100), RGB ( 20,  10, 0), 1, 1)
 //! @endcode
 //-----------------------------------------------------------------------------
 
@@ -260,14 +280,19 @@ void BirdDraw      (int x, int y, double SizeX, double SizeY, COLORREF bodyColor
 
 //-----------------------------------------------------------------------------
 //! Рисование белки
-//!
-//! @param x              x - координата центра солнца
-//! @param y              y - координата центра солнца
-//! @param petalColor     цвет солнца (закат)
+//! <table>
+//! <tr><td> @image html Squirrel.png</td>
+//! <td>
+//! @param x              x - координата центра туловища белки
+//! @param y              y - координата центра туловища белки
+//! @param Size           размер белки
+//! @param Whiskers       расстояние между усиками
+//! @param TailWag        размер хвоста (для виляния)</td></tr>
+//! </table>
 //!
 //! @par        <b> Пример использования </b>
 //! @code
-//!          SunDraw (30, 30, )
+//!          SquirrelDraw (100, 420, 0.5, 5, 1)
 //! @endcode
 //-----------------------------------------------------------------------------
 
@@ -312,14 +337,22 @@ void SquirrelDraw  (int x, int y, double Size, int Whiskers, int TailWag)
 
 //-----------------------------------------------------------------------------
 //! Рисование зайчонка
-//!
-//! @param x              x - координата центра солнца
-//! @param y              y - координата центра солнца
-//! @param petalColor     цвет солнца (закат)
+//! <table>
+//! <tr><td> @image html Hare.png</td>
+//! <td>
+//! @param x              x - координата центра головы зайчонка
+//! @param y              y - координата центра головы зайчонка
+//! @param Size           размер зайчонка
+//! @param EarsDown       положение ушей
+//! @param NoseSniff      размер носа (для обнюхивания)
+//! @param HeadDown       положение головы (для опускания)
+//! @param BodyColor      цвет зайчонка
+//! @param Smile          размер рта (для улыбки)</td></tr>
+//! </table>
 //!
 //! @par        <b> Пример использования </b>
 //! @code
-//!          SunDraw (30, 30, )
+//!          HareDraw (480, 480, 0.5, 40, 4, 10, TX_LIGHTGRAY, 10)
 //! @endcode
 //-----------------------------------------------------------------------------
 
@@ -363,21 +396,27 @@ void HareDraw      (int x, int y, double Size, int EarsDown, int NoseSniff, int 
 
     txSetColor     (TX_BLACK);
     txSetFillColor (TX_BLACK);
-    txCircle       (x - 13*Size,             y - (5 - HeadDown)*Size,             8*Size);
-    txCircle       (x + 13*Size,             y - (5 - HeadDown)*Size,             8*Size);
-    txEllipse      (x- (5 + NoseSniff)*Size, y + (5 - NoseSniff + HeadDown)*Size, x + (5 + NoseSniff)*Size, y + (10 + NoseSniff + HeadDown)*Size);
+    txCircle       (x - 13*Size,              y - (5 - HeadDown)*Size,             8*Size);
+    txCircle       (x + 13*Size,              y - (5 - HeadDown)*Size,             8*Size);
+    txEllipse      (x - (5 + NoseSniff)*Size, y + (5 - NoseSniff + HeadDown)*Size, x + (5 + NoseSniff)*Size, y + (10 + NoseSniff + HeadDown)*Size);
     }
 
 //-----------------------------------------------------------------------------
 //! Рисование лисы
-//!
-//! @param x              x - координата центра солнца
-//! @param y              y - координата центра солнца
-//! @param petalColor     цвет солнца (закат)
+//! <table>
+//! <tr><td> @image html Fox.png</td>
+//! <td>
+//! @param x              x - координата центра головы лисы
+//! @param y              y - координата центра головы лисы
+//! @param NoseSniff      размер носа (для обнюхивания)
+//! @param HeadDown       положение головы (для опускания)
+//! @param TailDown       положение хвоста (для опускания)
+//! @param StepPaw        положение ног (для ходьбы)</td></tr>
+//! </table>
 //!
 //! @par        <b> Пример использования </b>
 //! @code
-//!          SunDraw (30, 30, )
+//!          FoxDraw (1000, 400, 2, 50, 100, 5)
 //! @endcode
 //-----------------------------------------------------------------------------
 
@@ -431,14 +470,16 @@ void FoxDraw        (int x, int y, int NoseSniff, int HeadDown, int TailDown, in
 
 //-----------------------------------------------------------------------------
 //! Рисование морковки
-//!
-//! @param x              x - координата центра солнца
-//! @param y              y - координата центра солнца
-//! @param petalColor     цвет солнца (закат)
+//! <table>
+//! <tr><td> @image html Carrot.png</td>
+//! <td>
+//! @param x              x - координата
+//! @param y              y - координата </td></tr>
+//! </table>
 //!
 //! @par        <b> Пример использования </b>
 //! @code
-//!          SunDraw (30, 30, )
+//!          CarrotDraw (30, 30)
 //! @endcode
 //-----------------------------------------------------------------------------
 
@@ -464,14 +505,17 @@ void CarrotDraw     (int x, int y)
 //! <table>
 //! <tr><td> @image html Fir.png</td>
 //! <td>
-//! @param x              x - координата центра солнца
-//! @param y              y - координата центра солнца
-//! @param petalColor     цвет солнца (закат)</td></tr>
+//! @param x              x - координата верхушки ёлочки
+//! @param y              y - координата верхушки ёлочки
+//! @param Size           размер ёлочки
+//! @param WidthFir       толщина ёлочки
+//! @param WindBlows      покачивание ёлочки (ветер)
+//! @param WidthTrunk     толщина ствола ёлочки </td></tr>
 //! </table>
 //!
 //! @par        <b> Пример использования </b>
 //! @code
-//!          SunDraw (30, 30, )
+//!          FirDraw (700, 130, 1, 40, 20, 5)
 //! @endcode
 //-----------------------------------------------------------------------------
 
@@ -505,14 +549,24 @@ void FirDraw        (int x, int y, double Size, int WidthFir, int WindBlows, dou
 
 //-----------------------------------------------------------------------------
 //! Рисование совы
-//!
-//! @param x              x - координата центра солнца
-//! @param y              y - координата центра солнца
-//! @param petalColor     цвет солнца (закат)
+//! <table>
+//! <tr><td> @image html Owl.png</td>
+//! <td>
+//! @param x              x - координата центра туловища
+//! @param y              y - координата центра туловища
+//! @param Size           размер совы
+//! @param EyesWidth      размер глаз
+//! @param EyesMove       положение зрачков глаз
+//! @param NeckUp         размер шеи
+//! @param WindBlows      покачивание совы (ветер)
+//! @param MouthOpen      открытый/закрытый рот
+//! @param FlapWing       положение крыльев (взмахи)
+//! @param EyesColor      цвет глаз </td></tr>
+//! </table>
 //!
 //! @par        <b> Пример использования </b>
 //! @code
-//!          SunDraw (30, 30, )
+//!          OwlDraw (695, 305, 1, 1, 10, 20, 20, 20, 1, TX_WHITE)
 //! @endcode
 //-----------------------------------------------------------------------------
 
