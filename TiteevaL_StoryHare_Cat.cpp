@@ -117,11 +117,12 @@ void EpisodeOne ()
 
         SunDraw        (200 + t/8,  59 + t/8, RGB (255, 255 - t/4, 0));
         BackgroundDraw ();
+        PondDraw       (100, 400, 0.5, 0, TX_WHITE, TX_GREEN);
         CarrotDraw     (415, 525);
 
         BirchDraw      (557, 201, 1.2, 10, 0, 0, TX_GREEN);
         BirchDraw      (327, 301, 1,    0, 0, 0, TX_GREEN);
-        BirchDraw      (97,  160, 1.5, -5, 0, 0, TX_GREEN);
+        BirchDraw      (97,  130, 1.5, -5, 0, 0, TX_GREEN);
         FirDraw        (497, 231, 0.5, 30, 0, 0);
         FirDraw        (897, 111, 1,  -20, 0, 0);
         FirDraw        (697, 111, 0.8, 40, 0, 0);
@@ -129,7 +130,7 @@ void EpisodeOne ()
 
         OwlDraw        (695, 305, 1, 1, 0, -20, 0, 20, 0, TX_WHITE);
 
-        FlowerDraw     (140, 440, t * 0.002,  RGB (200, 200, 200));
+        FlowerDraw     (140, 550, t * 0.002,  RGB (200, 200, 200));
         FlowerDraw     (800, 550, t * 0.001,  RGB ( 22, 195, 255));
         FlowerDraw     (400, 500, t * 0.0015, RGB (100, 100, 100));
         FlowerDraw     ( 40, 340, t * 0.0005, RGB (200, 100,   0));
@@ -162,11 +163,12 @@ void EpisodeTwo   ()
 
         SunDraw        (260 + t / 8,  119 + t / 8, RGB (255, 135 - t/4, 0));
         BackgroundDraw ();
+        PondDraw       (100, 400, 0.5, 1, TX_WHITE, TX_GREEN);
         CarrotDraw     (415, 525);
 
         BirchDraw      (557, 201, 1.2, 10, 0, 0, TX_GREEN);
         BirchDraw      (327, 301, 1,    0, 0, 0, TX_GREEN);
-        BirchDraw      (97,  160, 1.5, -5, 0, 0, TX_GREEN);
+        BirchDraw      (97,  130, 1.5, -5, 0, 0, TX_GREEN);
         FirDraw        (497, 231, 0.5, 30, 0, 0);
         FirDraw        (897, 111, 1,  -20, 0, 0);
         FirDraw        (697, 111, 0.8, 40, 0, 0);
@@ -174,7 +176,7 @@ void EpisodeTwo   ()
 
         OwlDraw        (695, 305, 1, 2, (t % 20) - 10, (t % 40) - 20, 0, 20, 0, TX_WHITE);
 
-        FlowerDraw     (140, 440, 0.96, RGB (200, 200, 200));
+        FlowerDraw     (140, 550, 0.96, RGB (200, 200, 200));
         FlowerDraw     (800, 550, 0.48, RGB ( 22, 195, 255));
         FlowerDraw     (400, 500, 0.72, RGB (100, 100, 100));
         FlowerDraw     ( 40, 340, 0.24, RGB (200, 100,   0));
@@ -217,7 +219,7 @@ void EpisodeThree   ()
 
         BirchDraw      (557, 201, 1.2, 10, 0, 0, TX_GREEN);
         BirchDraw      (327, 301, 1,    0, 0, 0, TX_GREEN);
-        BirchDraw      (97,  160, 1.5, -5, 0, 0, TX_GREEN);
+        BirchDraw      (97,  130, 1.5, -5, 0, 0, TX_GREEN);
         FirDraw        (497, 231, 0.5, 30, 0, 0);
         FirDraw        (897, 111, 1,  -20, 0, 0);
         FirDraw        (697, 111, 0.8, 40, 0, 0);
@@ -225,7 +227,8 @@ void EpisodeThree   ()
 
         OwlDraw        (695, 305, 1,(t/20 % 2) + 1, 0, 0, 0, (t/10 % 2)*20, 0, TX_YELLOW);
 
-        FlowerDraw     (140, 440, 0.96, RGB (200, 200, 200));
+        PondDraw       (100, 400, 0.5, 0, TX_WHITE, TX_GREEN);
+        FlowerDraw     (140, 550, 0.96, RGB (200, 200, 200));
         FlowerDraw     (800, 550, 0.48, RGB ( 22, 195, 255));
         FlowerDraw     (400, 500, 0.72, RGB (100, 100, 100));
         FlowerDraw     ( 40, 340, 0.24, RGB (200, 100,   0));
@@ -254,11 +257,12 @@ void EpisodeFour   ()
         BackgroundDraw_Autumn (0, 0);
 
         SunDraw        (200 + t/8, 59 + t/8, RGB (255, 255 - t/4, 0));
+        PondDraw       (100, 400, 0.5, 1, TX_BLUE, TX_BLUE);
         BackgroundDraw ();
 
         BirchDraw      (557, 201, 1.2, 10, (t % 40) - 20,  0, TX_YELLOW);
         BirchDraw      (327, 301, 1,    0, (t % 40) - 20,  0, TX_ORANGE);
-        BirchDraw      (97,  160, 1.5, -5, (t % 40) - 20,  0, TX_YELLOW);
+        BirchDraw      (97,  130, 1.5, -5, (t % 40) - 20,  0, TX_YELLOW);
         FirDraw        (497, 231, 0.5, 30, (t % 40) - 20,  0);
         FirDraw        (897, 111, 1,  -20, (t % 40) - 20,  0);
         FirDraw        (697, 111, 0.8, 40, (t % 40) - 20,  0);
@@ -266,7 +270,7 @@ void EpisodeFour   ()
 
         OwlDraw        (695, 305, 1, (t/20 % 2) + 1, 0, 0, (t % 40) - 20, (t/10 % 2) * 20, t/100 % 2, TX_WHITE);
 
-        FlowerDraw     (140, 440, 0.96, RGB (200, 200, 200));
+        FlowerDraw     (140, 550, 0.96, RGB (200, 200, 200));
         FlowerDraw     (800, 550, 0.48, RGB ( 22, 195, 255));
         FlowerDraw     (400, 500, 0.72, RGB (100, 100, 100));
         FlowerDraw     ( 40, 340, 0.24, RGB (200, 100,   0));
@@ -304,7 +308,7 @@ void EpisodeFive   ()
 
         BirchDraw      (557, 201, 1.2, 10, (t % 40) - 20,  0, TX_WHITE);
         BirchDraw      (327, 301, 1,    0, (t % 40) - 20,  0, TX_WHITE);
-        BirchDraw      (97,  160, 1.5, -5, (t % 40) - 20,  0, TX_WHITE);
+        BirchDraw      (97,  130, 1.5, -5, (t % 40) - 20,  0, TX_WHITE);
         FirDraw        (497, 231, 0.5, 30, (t % 40) - 20,  0);
         FirDraw        (897, 111, 1,  -20, (t % 40) - 20,  0);
         FirDraw        (697, 111, 0.8, 40, (t % 40) - 20,  0);
@@ -339,7 +343,7 @@ void EpisodeLast   ()
 
         BirchDraw      (557, 201, 1.2, 10, (t % 40) - 20,  0, TX_WHITE);
         BirchDraw      (327, 301, 1,    0, (t % 40) - 20,  0, TX_WHITE);
-        BirchDraw      (97,  160, 1.5, -5, (t % 40) - 20,  0, TX_WHITE);
+        BirchDraw      (97,  130, 1.5, -5, (t % 40) - 20,  0, TX_WHITE);
         FirDraw        (497, 231, 0.5, 30, (t % 40) - 20,  0);
         FirDraw        (897, 111, 1,  -20, (t % 40) - 20,  0);
         FirDraw        (697, 111, 0.8, 40, (t % 40) - 20,  0);

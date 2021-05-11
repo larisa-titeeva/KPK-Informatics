@@ -38,6 +38,7 @@ void FlowerDraw     (int x, int y, double Size, COLORREF petalColor);
 void SunDraw        (int x, int y, COLORREF SunColor);
 void StarDraw       (int x, int y, double StarFlicker);
 void HedgehogDraw   (int x, int y, int SizeX, int NeedlePrick);
+void PondDraw       (int x, int y, double Size, int BudOpens, COLORREF lotusColor, COLORREF sheetColor);
 void SquirrelDraw   (int x, int y, double Size,  int Whiskers, int TailWag);
 void FoxDraw        (int x, int y, int NoseSniff, int HeadDown, int TailDown, int StepPaw);
 void FirDraw        (int x, int y, double Size,  int WidthFir, int WindBlows, double WidthTrunk);
@@ -503,6 +504,55 @@ void CarrotDraw     (int x, int y)
     txLine          (x + 67, y - 17, x + 45, y - 20);
     txLine          (x + 67, y - 17, x + 30, y - 15);
     }
+
+//-----------------------------------------------------------------------------
+//! Рисование водоема
+//! <table>
+//! <tr><td> @image html Pond.png</td>
+//! <td>
+//! @param x              x - координата
+//! @param y              y - координата
+//! @param BudOpens       расстояние между лепестками лотоса (для раскрытия бутона)
+//! @param lotusColor     цвет лотоса
+//! @param sheetColor     цвет листьев кувшинки</td></tr>
+//! </table>
+//!
+//! @par        <b> Пример использования </b>
+//! @code
+//!          PondDraw (30, 30, 0.5, 1, TX_WHITE, TX_GREEN)
+//! @endcode
+//-----------------------------------------------------------------------------
+
+void PondDraw     (int x, int y, double Size, int BudOpens, COLORREF lotusColor, COLORREF sheetColor)
+    {
+    txSetColor      (TX_BLUE);
+    txSetFillColor  (TX_BLUE);
+    txCircle      (x, y, 60*Size);
+    txCircle      (x - 90*Size, y + 30*Size, 70*Size);
+    txCircle      (x + 60*Size, y + 30*Size, 100*Size);
+
+    txSetColor      (TX_BLUE);
+    txSetFillColor  (lotusColor);
+    POINT lotus[] ={ {ROUND (x +   60*Size),                        y},
+                     {ROUND (x +  (60 - 20*BudOpens)*Size), ROUND (y - 20*Size)},
+                     {ROUND (x +   60*Size),                ROUND (y - 20*Size)},
+                     {ROUND (x +  (70 - 10*BudOpens)*Size), ROUND (y - 40*Size)},
+                     {ROUND (x +   70*Size),                ROUND (y - 30*Size)},
+                     {ROUND (x +   80*Size),                ROUND (y - 50*Size)},
+                     {ROUND (x +   90*Size),                ROUND (y - 30*Size)},
+                     {ROUND (x +  (90 + 10*BudOpens)*Size), ROUND (y - 40*Size)},
+                     {ROUND (x +  100*Size),                ROUND (y - 20*Size)},
+                     {ROUND (x + (100 + 20*BudOpens)*Size), ROUND (y - 20*Size)},
+                     {ROUND (x +  100*Size),                       y} };
+    txPolygon       (lotus, 11);
+
+    txSetColor      (TX_BLUE);
+    txSetFillColor  (sheetColor);
+    txEllipse      (x + 90*Size, y + 30*Size, x + 150*Size, y + 60*Size);
+    txEllipse      (x - 45*Size, y - 30*Size, x, y);
+    txEllipse      (x - 150*Size, y, x - 90*Size, y + 45*Size);
+    }
+
 
 //-----------------------------------------------------------------------------
 //! Рисование ёлочки
