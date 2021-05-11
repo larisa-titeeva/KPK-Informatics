@@ -37,7 +37,7 @@ void DrawTree     (int x, int y, int sizeX, int sizeY, int wind);
 void DrawCat      (int x, int y, int UpHvost, int GoNose, int sizeLeftEye, int sizeRightEye, int UhoLDown, int UhoRDown,int ZrachkiL, int ZrachkiR,
                    int LlapkaUp, int RlapkaUp, int Yazik, COLORREF colorCat, COLORREF colorNose, COLORREF colorLapki, COLORREF colorEyes);
 void Bang         (int x, int y, int ShadowX, int ShadowY, const char* text, int sizeChar, int NewSizeCar, COLORREF colorText, COLORREF colorShadow);
-void CatSays      (int x, int y, const char* text, int sizeChar, COLORREF colorText)
+void CatSays      (int x, int y, const char* text, int sizeChar, COLORREF colorText);
 void Les            (int wind);
 void ThisStart      ( );
 void PlanetRotates  ( );
@@ -311,7 +311,7 @@ void ThisStart ( )
                  DrawStarBang (610, 370,  -10 + i,     -10 + i, TX_ORANGE);
                  Bang (550-i/4, 400-(i/2), 546-i/4, 404-(i/2), "Bang!!!", 30 + (i/4)*2, 0, TX_YELLOW, TX_BROWN);
                  }
-
+              }
          txSleep (50);
          }
    }

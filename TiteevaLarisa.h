@@ -35,9 +35,11 @@ void MountainDraw   (int x, int y, double Size);
 void FlowerDraw     (int x, int y, double Size, COLORREF petalColor);
 void SunDraw        (int x, int y, COLORREF SunColor);
 void StarDraw       (int x, int y, double StarFlicker);
+void HedgehogDraw   (int x, int y, int SizeX, int NeedlePrick);
 void SquirrelDraw   (int x, int y, double Size,  int Whiskers, int TailWag);
 void FoxDraw        (int x, int y, int NoseSniff, int HeadDown, int TailDown, int StepPaw);
 void FirDraw        (int x, int y, double Size,  int WidthFir, int WindBlows, double WidthTrunk);
+void BirchDraw      (int x, int y, double Size, int WidthBirch, int WindBlows, double WidthTrunk, COLORREF leafColor);
 
 void BirdDraw       (int x, int y, double SizeX, double SizeY, COLORREF bodyColor,
                      COLORREF wingColor, int WingMove, int EyesBlink);
@@ -548,6 +550,41 @@ void FirDraw        (int x, int y, double Size, int WidthFir, int WindBlows, dou
     }
 
 //-----------------------------------------------------------------------------
+//! Рисование берёзы
+//! <table>
+//! <tr><td> @image html Fir.png</td>
+//! <td>
+//! @param x              x - координата верхушки ствола берёзы
+//! @param y              y - координата верхушки ствола берёзы
+//! @param Size           размер березы
+//! @param WidthBirch     толщина березы
+//! @param WindBlows      покачивание берёзы (ветер)
+//! @param WidthTrunk     толщина ствола берёзы
+//! @param leafColor      цвет листьев</td></tr>
+//! </table>
+//!
+//! @par        <b> Пример использования </b>
+//! @code
+//!          BirchDraw (700, 130, 1, 40, 20, 5)
+//! @endcode
+//-----------------------------------------------------------------------------
+void BirchDraw        (int x, int y, double Size, int WidthBirch, int WindBlows, double WidthTrunk, COLORREF leafColor)
+    {
+    txSetColor      (RGB ( 0, 80, 0));
+    txSetFillColor  (leafColor);
+    txEllipse      (x - (45 - WindBlows + WidthBirch)*Size, y - 60*Size,
+                    x + (45 + WindBlows + WidthBirch)*Size, y + 120*Size);
+
+
+    txSetColor      (TX_BLACK);
+    txSetFillColor  (TX_WHITE);
+    POINT birch[] ={ {x + WindBlows, y},
+                    {ROUND (x + 15*Size + WidthTrunk), ROUND (y + 150*Size)},
+                    {ROUND (x - 15*Size - WidthTrunk), ROUND (y + 150*Size)} };
+    txPolygon       (birch, 3);
+    }
+
+//-----------------------------------------------------------------------------
 //! Рисование совы
 //! <table>
 //! <tr><td> @image html Owl.png</td>
@@ -622,4 +659,38 @@ void OwlDraw        (int x, int y, double Size, int EyesWidth, int EyesMove, int
                     {ROUND (x + 10*Size + WindBlows/2), ROUND (y - 37*Size - NeckUp)},
                     {ROUND (x + WindBlows/2),           ROUND (y - 20*Size - NeckUp)} };
     txPolygon      (owl4, 4);
+    }
+
+void HedgehogDraw   (int x, int y, int SizeX, int NeedlePrick)
+    {
+    txSetColor      (TX_BLACK);
+    txSetFillColor  (TX_GRAY);
+    POINT hedgehog1[] ={ {(x), (y)},
+                         {(x + 20*SizeX),  (y - 40 - NeedlePrick)},
+                         { (x),  (y - 34)},
+                         { (x - 10*SizeX),  (y - 50 - NeedlePrick)},
+                         { (x - 20*SizeX), (y - 40)},
+                         { (x - 30*SizeX), (y - 44 - NeedlePrick)},
+                         { (x - 44*SizeX), (y - 26)},
+                         {(x - (60 + NeedlePrick)*SizeX),  (y - 30)},
+                         { (x - 50*SizeX),  (y - 10)},
+                         { (x - (60 + NeedlePrick)*SizeX),  (y)} };
+    txPolygon       (hedgehog1, 10);
+
+    txSetColor      (TX_BROWN);
+    txSetFillColor  (TX_BROWN);
+    POINT hedgehog2[] ={ {x, (y)},
+                         {x + 10*SizeX, y - 20},
+                         {(x + 40*SizeX),y - 14} };
+    txPolygon       (hedgehog2, 3);
+
+
+    txSetColor     (TX_BLACK);
+    txSetFillColor (TX_WHITE);
+    txCircle       (x + 10*SizeX, y - 15, 5);
+
+    txSetColor     (TX_BLACK);
+    txSetFillColor (TX_BLACK);
+    txCircle       (x + 10*SizeX, y - 15, 2);
+    txCircle       (x + 40*SizeX, y - 14, 5);
     }
