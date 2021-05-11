@@ -16,9 +16,11 @@
 //!        - @ref SquirrelDraw()
 //!        - @ref FoxDraw()
 //!        - @ref FirDraw()
+//!        - @ref BirchDraw()
 //!        - @ref BirdDraw()
 //!        - @ref HareDraw()
 //!        - @ref OwlDraw()
+//!        - @ref HedgehogDraw()
 //!
 //! @note       Каждому, кто хочет достичь успеха в программировании, нужно понимать, что технология осваивается ни за неделю.
 //!            Но, чтобы начать понимать и разбираться в его основах, не нужно ничего, кроме желания!
@@ -552,7 +554,7 @@ void FirDraw        (int x, int y, double Size, int WidthFir, int WindBlows, dou
 //-----------------------------------------------------------------------------
 //! Рисование берёзы
 //! <table>
-//! <tr><td> @image html Fir.png</td>
+//! <tr><td> @image html Birch.png</td>
 //! <td>
 //! @param x              x - координата верхушки ствола берёзы
 //! @param y              y - координата верхушки ствола берёзы
@@ -660,6 +662,24 @@ void OwlDraw        (int x, int y, double Size, int EyesWidth, int EyesMove, int
                     {ROUND (x + WindBlows/2),           ROUND (y - 20*Size - NeckUp)} };
     txPolygon      (owl4, 4);
     }
+
+//-----------------------------------------------------------------------------
+//! Рисование ёжика
+//! <table>
+//! <tr><td> @image html Hedgehog.png</td>
+//! <td>
+//! @param x              x - координата центра цветка
+//! @param y              y - координата центра цветка
+//! @param SizeX          размер ёжика по оси OX (для движения вправо/влево)
+//! @param NeedlePrick    размер иголок</td></tr>
+//! </table>
+//!
+//! @par        <b> Пример использования </b>
+//! @code
+//!          HedgehogDraw (30, 30, 1, 5)
+//! @endcode
+//-----------------------------------------------------------------------------
+
 
 void HedgehogDraw   (int x, int y, int SizeX, int NeedlePrick)
     {
