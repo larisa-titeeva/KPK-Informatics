@@ -67,16 +67,16 @@ void SceneBang  ()
 
         if (t > 100)
             {
-            Bang (150 - t/2, 200 + t/4, 146 - t/2, 204 + t/4, "Big!!!", 30 + t, 0, TX_RED, TX_BROWN);
+            Bang (150 - t/2, 200 + t/4, 146 - t/2, 204 + t/4, "Big!!!",  30 + t, 0, TX_RED,    TX_BROWN);
             }
 
         if (t > 110)
             {
-            Bang (550 - t/2, 50 + t/4, 546 - t/2, 54 + t/4, "Bang!!!", 30 + t, 0, TX_YELLOW, TX_BROWN);
+            Bang (550 - t/2,  50 + t/4, 546 - t/2,  54 + t/4, "Bang!!!", 30 + t, 0, TX_YELLOW, TX_BROWN);
             }
 
-        DrawStarNew (500, 300 + 0.5*t, 0.9 * t, TX_LIGHTBLUE);
-        DrawStarNew (500, 295 + 0.2*t, 0.4 * t, TX_LIGHTGREEN);
+        DrawStarNew (500, ROUND (300 + 0.5*t), ROUND (0.9 * t), TX_LIGHTBLUE);
+        DrawStarNew (500, ROUND (295 + 0.2*t), ROUND (0.4 * t), TX_LIGHTGREEN);
 
         txSleep  (20);
         }
@@ -87,15 +87,15 @@ void SceneBang  ()
 
         if (t > 0 and t < 100)
             {
-            DrawCat  (800, 300 - t, t % 5, t % 2, 2, 2, -(t/5 % 2) * 3 + 3, -(t/5 % 2) * 3 + 3, t % 4, t % 4, (t/10 % 2) *7, 7  - (t/10 % 2) *7, t/20 % 2, TX_LIGHTGRAY, TX_RED, TX_BLACK, TX_GREEN);
-            DrawCat  (200, 300 + t, t % 5, t % 2, 2, 2, -(t/5 % 2) * 3 + 3, -(t/5 % 2) * 3 + 3, t % 4, t % 4, (t/10 % 2) *7, 7  - (t/10 % 2) *7, t/20 % 2, TX_LIGHTGRAY, TX_RED, TX_BLACK, TX_GREEN);
+            DrawCat  (800, 300 - t, t/10 % 5, t % 2, 2, 2, -(t/5 % 2) * 3 + 3, -(t/5 % 2) * 3 + 3, t/10 % 4, t/10 % 4, (t/10 % 2) *7, 7  - (t/10 % 2) *7, t/20 % 2, TX_LIGHTGRAY, TX_RED, TX_BLACK, TX_GREEN);
+            DrawCat  (200, 300 + t, t/10 % 5, t % 2, 2, 2, -(t/5 % 2) * 3 + 3, -(t/5 % 2) * 3 + 3, t/10 % 4, t/10 % 4, (t/10 % 2) *7, 7  - (t/10 % 2) *7, t/20 % 2, TX_LIGHTGRAY, TX_RED, TX_BLACK, TX_GREEN);
             txSleep  (5);
             }
 
         if (t > 100)
             {
-            DrawCat  (800, 200, t % 5, t % 2, 2, 2, -(t/5 % 2) * 3 + 3, -(t/5 % 2) * 3 + 3, t % 4, t % 4, (t/100 % 2) *20, 0, t/20 % 2, TX_LIGHTGRAY, TX_RED, TX_BLACK, TX_GREEN);
-            DrawCat  (200, 400, t % 5, t % 2, 2, 2, -(t/5 % 2) * 3 + 3, -(t/5 % 2) * 3 + 3, t % 4, t % 4, 0, 20  - (t/100 % 2) *20, t/20 % 2, TX_LIGHTGRAY, TX_RED, TX_BLACK, TX_GREEN);
+            DrawCat  (800, 200, t/10 % 5, t % 2, 2, 2, -(t/5 % 2) * 3 + 3, -(t/5 % 2) * 3 + 3, t/10 % 4, t/10 % 4, (t/100 % 2) *20, 0,                    t/20 % 2, TX_LIGHTGRAY, TX_RED, TX_BLACK, TX_GREEN);
+            DrawCat  (200, 400, t/10 % 5, t % 2, 2, 2, -(t/5 % 2) * 3 + 3, -(t/5 % 2) * 3 + 3, t/10 % 4, t/10 % 4, 0,              20  - (t/100 % 2) *20, t/20 % 2, TX_LIGHTGRAY, TX_RED, TX_BLACK, TX_GREEN);
             txSleep  (5);
             }
 

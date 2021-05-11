@@ -9,6 +9,7 @@
 //!
 //!    ‘ункции:
 //!        - @ref CarrotDraw()
+//!        - @ref PondDraw()
 //!        - @ref MountainDraw()
 //!        - @ref FlowerDraw()
 //!        - @ref SunDraw()
@@ -22,7 +23,7 @@
 //!        - @ref OwlDraw()
 //!        - @ref HedgehogDraw()
 //!
-//! @note        аждому, кто хочет достичь успеха в программировании, нужно понимать, что технологи€ осваиваетс€ ни за неделю.
+//! @note       аждому, кто хочет достичь успеха в программировании, нужно понимать, что технологи€ осваиваетс€ ни за неделю.
 //!            Ќо, чтобы начать понимать и разбиратьс€ в его основах, не нужно ничего, кроме желани€!
 //!
 //! @image html Episode1.png
@@ -624,15 +625,15 @@ void BirchDraw        (int x, int y, double Size, int WidthBirch, int WindBlows,
     {
     txSetColor      (RGB ( 0, 80, 0));
     txSetFillColor  (leafColor);
-    txEllipse      (x - (45 - WindBlows + WidthBirch)*Size, y - 60*Size,
-                    x + (45 + WindBlows + WidthBirch)*Size, y + 120*Size);
+    txEllipse       (x - (45 - WindBlows + WidthBirch)*Size, y - 60*Size,
+                     x + (45 + WindBlows + WidthBirch)*Size, y + 120*Size);
 
 
     txSetColor      (TX_BLACK);
     txSetFillColor  (TX_WHITE);
-    POINT birch[] ={ {x + WindBlows, y},
-                    {ROUND (x + 15*Size + WidthTrunk), ROUND (y + 150*Size)},
-                    {ROUND (x - 15*Size - WidthTrunk), ROUND (y + 150*Size)} };
+    POINT birch[] ={ {       x + WindBlows,                    y},
+                     {ROUND (x + 15*Size + WidthTrunk), ROUND (y + 150*Size)},
+                     {ROUND (x - 15*Size - WidthTrunk), ROUND (y + 150*Size)} };
     txPolygon       (birch, 3);
     }
 
@@ -730,29 +731,28 @@ void OwlDraw        (int x, int y, double Size, int EyesWidth, int EyesMove, int
 //! @endcode
 //-----------------------------------------------------------------------------
 
-
-void HedgehogDraw   (int x, int y, int SizeX, int NeedlePrick)
+void HedgehogDraw  (int x, int y, int SizeX, int NeedlePrick)
     {
-    txSetColor      (TX_BLACK);
-    txSetFillColor  (TX_GRAY);
-    POINT hedgehog1[] ={ {(x), (y)},
-                         {(x + 20*SizeX),  (y - 40 - NeedlePrick)},
-                         { (x),  (y - 34)},
-                         { (x - 10*SizeX),  (y - 50 - NeedlePrick)},
-                         { (x - 20*SizeX), (y - 40)},
-                         { (x - 30*SizeX), (y - 44 - NeedlePrick)},
-                         { (x - 44*SizeX), (y - 26)},
-                         {(x - (60 + NeedlePrick)*SizeX),  (y - 30)},
-                         { (x - 50*SizeX),  (y - 10)},
-                         { (x - (60 + NeedlePrick)*SizeX),  (y)} };
-    txPolygon       (hedgehog1, 10);
+    txSetColor     (TX_BLACK);
+    txSetFillColor (TX_GRAY);
+    POINT hedgehog1[] ={ { x,                              y},
+                         {(x + 20*SizeX),                 (y - 40 - NeedlePrick)},
+                         { x,                             (y - 34)},
+                         {(x - 10*SizeX),                 (y - 50 - NeedlePrick)},
+                         {(x - 20*SizeX),                 (y - 40)},
+                         {(x - 30*SizeX),                 (y - 44 - NeedlePrick)},
+                         {(x - 44*SizeX),                 (y - 26)},
+                         {(x - (60 + NeedlePrick)*SizeX), (y - 30)},
+                         {(x - 50*SizeX),                 (y - 10)},
+                         {(x - (60 + NeedlePrick)*SizeX),  y} };
+    txPolygon      (hedgehog1, 10);
 
-    txSetColor      (TX_BROWN);
-    txSetFillColor  (TX_BROWN);
-    POINT hedgehog2[] ={ {x, (y)},
+    txSetColor     (TX_BROWN);
+    txSetFillColor (TX_BROWN);
+    POINT hedgehog2[] ={ {x,            y},
                          {x + 10*SizeX, y - 20},
-                         {(x + 40*SizeX),y - 14} };
-    txPolygon       (hedgehog2, 3);
+                         {x + 40*SizeX, y - 14} };
+    txPolygon      (hedgehog2, 3);
 
 
     txSetColor     (TX_BLACK);
