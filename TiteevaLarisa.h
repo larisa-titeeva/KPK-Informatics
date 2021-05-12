@@ -39,6 +39,7 @@ void FlowerDraw     (int x, int y, double Size, COLORREF petalColor);
 void SunDraw        (int x, int y, COLORREF SunColor);
 void StarDraw       (int x, int y, double StarFlicker);
 void HedgehogDraw   (int x, int y, int SizeX, int NeedlePrick);
+void FrogDraw       (int x, int y, int Size, int MouthOpen);
 void PondDraw       (int x, int y, double Size, int BudOpens, COLORREF lotusColor, COLORREF sheetColor);
 void SquirrelDraw   (int x, int y, double Size,  int Whiskers, int TailWag);
 void FoxDraw        (int x, int y, int NoseSniff, int HeadDown, int TailDown, int StepPaw);
@@ -526,13 +527,13 @@ void CarrotDraw     (int x, int y)
 
 void PondDraw     (int x, int y, double Size, int BudOpens, COLORREF lotusColor, COLORREF sheetColor)
     {
-    txSetColor      (TX_BLUE);
-    txSetFillColor  (TX_BLUE);
+    txSetColor      (TX_LIGHTBLUE);
+    txSetFillColor  (TX_LIGHTBLUE);
     txCircle      (x, y, 60*Size);
     txCircle      (x - 90*Size, y + 30*Size, 70*Size);
     txCircle      (x + 60*Size, y + 30*Size, 100*Size);
 
-    txSetColor      (TX_BLUE);
+    txSetColor      (TX_LIGHTBLUE);
     txSetFillColor  (lotusColor);
     POINT lotus[] ={ {ROUND (x +   60*Size),                        y},
                      {ROUND (x +  (60 - 20*BudOpens)*Size), ROUND (y - 20*Size)},
@@ -547,13 +548,12 @@ void PondDraw     (int x, int y, double Size, int BudOpens, COLORREF lotusColor,
                      {ROUND (x +  100*Size),                       y} };
     txPolygon       (lotus, 11);
 
-    txSetColor      (TX_BLUE);
+    txSetColor      (TX_LIGHTBLUE);
     txSetFillColor  (sheetColor);
     txEllipse      (x + 90*Size, y + 30*Size, x + 150*Size, y + 60*Size);
     txEllipse      (x - 45*Size, y - 30*Size, x, y);
     txEllipse      (x - 150*Size, y, x - 90*Size, y + 45*Size);
     }
-
 
 //-----------------------------------------------------------------------------
 //! –исование Єлочки
@@ -719,8 +719,8 @@ void OwlDraw        (int x, int y, double Size, int EyesWidth, int EyesMove, int
 //! <table>
 //! <tr><td> @image html Hedgehog.png</td>
 //! <td>
-//! @param x              x - координата центра цветка
-//! @param y              y - координата центра цветка
+//! @param x              x - координата нижнего центра
+//! @param y              y - координата нижнего центра
 //! @param SizeX          размер Єжика по оси OX (дл€ движени€ вправо/влево)
 //! @param NeedlePrick    размер иголок</td></tr>
 //! </table>
@@ -763,4 +763,48 @@ void HedgehogDraw  (int x, int y, int SizeX, int NeedlePrick)
     txSetFillColor (TX_BLACK);
     txCircle       (x + 10*SizeX, y - 15, 2);
     txCircle       (x + 40*SizeX, y - 14, 5);
+    }
+
+//-----------------------------------------------------------------------------
+//! –исование л€гушки
+//! <table>
+//! <tr><td> @image html Frog.png</td>
+//! <td>
+//! @param x              x - координата центра головы л€гушки
+//! @param y              y - координата центра головы л€гушки
+//! @param Size           размер л€гушки
+//! @param MouthOpen      размер открытого рта (дл€ квакани€)</td></tr>
+//! </table>
+//!
+//! @par        <b> ѕример использовани€ </b>
+//! @code
+//!          FrogDraw (30, 30, 1, 1)
+//! @endcode
+//-----------------------------------------------------------------------------
+
+void FrogDraw (int x, int y, int Size, int MouthOpen)
+    {
+    txSetColor     (TX_BLACK);
+    txSetFillColor (TX_GREEN);
+    txEllipse      (x - 15*Size, y - 15*Size, x,           y + 15*Size);
+    txEllipse      (x ,          y - 15*Size, x + 15*Size, y + 15*Size);
+    txEllipse      (x - 30*Size, y,           x + 30*Size, y + 30*Size);
+
+    txSetColor     (TX_RED);
+    txSetFillColor (TX_RED);
+    POINT frog[] ={ {ROUND (x - 15*Size), ROUND (y + 15*Size)},
+                    {ROUND (x + 15*Size), ROUND (y + 15*Size)},
+                    {       x,            ROUND (y + (15 + MouthOpen*7)*Size)} };
+    txPolygon      (frog, 3);
+
+
+    txSetColor     (TX_BLACK);
+    txSetFillColor (TX_WHITE);
+    txCircle       (x - 7*Size, y - 7*Size, 5*Size);
+    txCircle       (x + 7*Size, y - 7*Size, 5*Size);
+
+    txSetColor     (TX_BLACK);
+    txSetFillColor (TX_BLACK);
+    txCircle       (x - 7*Size, y - 7*Size, 2*Size);
+    txCircle       (x + 7*Size, y - 7*Size, 2*Size);
     }

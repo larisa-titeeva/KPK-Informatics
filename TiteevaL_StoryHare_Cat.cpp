@@ -233,6 +233,7 @@ void EpisodeThree   ()
         FlowerDraw     (400, 500, 0.72, RGB (100, 100, 100));
         FlowerDraw     ( 40, 340, 0.24, RGB (200, 100,   0));
 
+        FrogDraw       (110, 400, 1, t/50 % 2);
         HareDraw       (480, 480, 0.5, 0, 0, 0, TX_LIGHTGRAY, 0);
         if (t >= 150)
             {
@@ -257,7 +258,7 @@ void EpisodeFour   ()
         BackgroundDraw_Autumn (0, 0);
 
         SunDraw        (200 + t/8, 59 + t/8, RGB (255, 255 - t/4, 0));
-        PondDraw       (100, 400, 0.5, 1, TX_BLUE, TX_BLUE);
+        PondDraw       (100, 400, 0.5, 1, TX_LIGHTBLUE, TX_LIGHTBLUE);
         BackgroundDraw ();
 
         BirchDraw      (557, 201, 1.2, 10, (t % 40) - 20,  0, TX_YELLOW);
