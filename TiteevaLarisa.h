@@ -679,8 +679,6 @@ void OwlDraw        (int x, int y, double Size, int EyesWidth, int EyesMove, int
                     {ROUND (x + 20*Size + WindBlows/2), ROUND (y - 65*Size - NeckUp)},
                     {ROUND (x + WindBlows/2),           ROUND (y - 45*Size - NeckUp)} };
     txPolygon       (owl2, 3);
-    txLine          (x - 40*Size + WindBlows/2, y,           x,           y + 40*Size);
-    txLine          (x + WindBlows/2,           y + 40*Size, x + 40*Size, y);
 
     txSetColor      (TX_ORANGE);
     txSetFillColor  (TX_ORANGE);

@@ -50,7 +50,7 @@ void SceneBang  ()
         {
         txClear ();
 
-        DrawStarBang (500, 300, t/5 * 5, t/5 * 5, TX_YELLOW);
+        DrawStarBang (500, 300, t/2 * 5, t/2 * 5, TX_YELLOW);
 
         DrawStarNew (400 - 2*t, 300 + 2*t, ROUND (0.7 * t), TX_YELLOW);
         DrawStarNew (525 + 4*t, 300 + 3*t, ROUND (0.2 * t), TX_RED);
@@ -72,7 +72,7 @@ void SceneBang  ()
 
         if (t > 110)
             {
-            Bang (550 - t/2,  50 + t/4, 546 - t/2,  54 + t/4, "Bang!!!", 30 + t, 0, TX_YELLOW, TX_BROWN);
+            Bang (550 - t/2,  50 + t/4, 546 - t/2,  54 + t/4, "Bang!!!", 30 + t, 0, TX_ORANGE, TX_BROWN);
             }
 
         DrawStarNew (500, ROUND (300 + 0.5*t), ROUND (0.9 * t), TX_LIGHTBLUE);
@@ -81,29 +81,58 @@ void SceneBang  ()
         txSleep  (20);
         }
 
-    for (int t = 0; t < 600; t += 1)
+    for (int t = 0; t < 100; t += 1)
         {
         txClear ();
 
-        if (t > 0 and t < 100)
+        DrawCat  (800, 300 - 1.5*t, t/100 % 5, t/100 % 2, 2, 2, -(t/20 % 2) * 3 + 3, -(t/100 % 2) * 3 + 3, t/150 % 4, t/150 % 4, (t/10 % 2) *7, 7  - (t/10 % 2) *7, t/20 % 2, TX_ORANGE,    TX_RED, TX_BLACK, TX_BLUE);
+        DrawCat  (200, 300 + 1.5*t, t/100 % 5, t/200 % 2, 2, 2, -(t/20 % 2) * 3 + 3, -(t/100 % 2) * 3 + 3, t/150 % 4, t/150 % 4, (t/10 % 2) *7, 7  - (t/10 % 2) *7, t/20 % 2, TX_LIGHTGRAY, TX_RED, TX_BLACK, TX_GREEN);
+
+        Bang     (200, 300, 196,  304, "No, that's not what happened!", 60, 0, TX_ORANGE, TX_RED);
+
+        txSleep  (20);
+        }
+
+    for (int t = 0; t < 600; t += 1)
+        {
+        BackgroundDraw_Summer (0, 0);
+
+        Bang (450, 500, 446,  504, "It's magic!", 40, 0, TX_BLUE, TX_GRAY);
+
+        DrawStarBang (800, 200, t%2 * 0.5, t%2 * 5, TX_YELLOW);
+        DrawStarBang (200, 500, t%2 * 0.5, t%2 * 5, TX_YELLOW);
+
+        DrawCat  (800, 150, t/100 % 5, t/100 % 2, 2, 2, -(t/20 % 2) * 3 + 3, -(t/100 % 2) * 3 + 3, t/150 % 4, t/150 % 4, (t/100 % 2) *20, 0,                    t/20 % 2, TX_ORANGE,    TX_RED, TX_BLACK, TX_BLUE);
+        DrawCat  (200, 450, t/100 % 5, t/100 % 2, 2, 2, -(t/20 % 2) * 3 + 3, -(t/100 % 2) * 3 + 3, t/150 % 4, t/150 % 4, 0,              20  - (t/100 % 2) *20, t/20 % 2, TX_LIGHTGRAY, TX_RED, TX_BLACK, TX_GREEN);
+
+        if (t > 50)
             {
-            DrawCat  (800, 300 - t, t/10 % 5, t % 2, 2, 2, -(t/5 % 2) * 3 + 3, -(t/5 % 2) * 3 + 3, t/10 % 4, t/10 % 4, (t/10 % 2) *7, 7  - (t/10 % 2) *7, t/20 % 2, TX_LIGHTGRAY, TX_RED, TX_BLACK, TX_GREEN);
-            DrawCat  (200, 300 + t, t/10 % 5, t % 2, 2, 2, -(t/5 % 2) * 3 + 3, -(t/5 % 2) * 3 + 3, t/10 % 4, t/10 % 4, (t/10 % 2) *7, 7  - (t/10 % 2) *7, t/20 % 2, TX_LIGHTGRAY, TX_RED, TX_BLACK, TX_GREEN);
-            txSleep  (5);
+            DrawTree  ( 50, 350, -1, -1, 0);
+            DrawGrass (400, 400, 1, 1, 0);
             }
 
         if (t > 100)
             {
-            DrawCat  (800, 200, t/10 % 5, t % 2, 2, 2, -(t/5 % 2) * 3 + 3, -(t/5 % 2) * 3 + 3, t/10 % 4, t/10 % 4, (t/100 % 2) *20, 0,                    t/20 % 2, TX_LIGHTGRAY, TX_RED, TX_BLACK, TX_GREEN);
-            DrawCat  (200, 400, t/10 % 5, t % 2, 2, 2, -(t/5 % 2) * 3 + 3, -(t/5 % 2) * 3 + 3, t/10 % 4, t/10 % 4, 0,              20  - (t/100 % 2) *20, t/20 % 2, TX_LIGHTGRAY, TX_RED, TX_BLACK, TX_GREEN);
-            txSleep  (5);
+            DrawGrass   (400, 400, 1, 1, 0);
+            DrawStarNew (250, 150, 20, TX_YELLOW);
             }
 
-        if (t > 593)
+        if (t > 150)
             {
-            txPlaySound (NULL);
+            DrawTree  (600, 500, -3, -2, 0);
+            DrawGrass (850, 400, 1, 1, 0);
+            DrawGrass (800, 480, 1, 1, 0);
             }
+        if (t > 200)
+            {
+            DrawGrass (50, 350, 1, 1, 0);
+            DrawTree  (400, 300, -4, -5, 0);
+            }
+
+        txSleep  (10);
         }
+
+    txPlaySound (NULL);
     }
 
 //-----------------------------------------------------------------------------
