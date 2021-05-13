@@ -100,7 +100,7 @@ void EpisodeTwo   ()
         {
         txSetColor     (TX_BLACK);
         txSelectFont   ("Times New Roman", 25);
-        txTextOut      (10, 565, "Белки умеют прыгать по деревьям");
+        txTextOut      (10, 565, "ГЃГҐГ«ГЄГЁ ГіГ¬ГҐГѕГІ ГЇГ°Г»ГЈГ ГІГј ГЇГ® Г¤ГҐГ°ГҐГўГјГїГ¬");
         }
         txSleep (20);
         }
@@ -140,7 +140,7 @@ void EpisodeThree   ()
         {
         txSetColor   (TX_BLACK);
         txSelectFont ("Times New Roman", 25);
-        txTextOut    (10, 565, "Совы могут видеть ночью");
+        txTextOut    (10, 565, "Г‘Г®ГўГ» Г¬Г®ГЈГіГІ ГўГЁГ¤ГҐГІГј Г­Г®Г·ГјГѕ");
         }
 
         txSleep (20);
@@ -181,7 +181,7 @@ void EpisodeFour   ()
             {
             txSetColor   (TX_BLACK);
             txSelectFont ("Times New Roman", 25);
-            txTextOut    (10, 565, "Птицы могут летать");
+            txTextOut    (10, 565, "ГЏГІГЁГ¶Г» Г¬Г®ГЈГіГІ Г«ГҐГІГ ГІГј");
             }
         txSleep (20);
         }
@@ -212,7 +212,7 @@ void EpisodeFive   ()
             {
             txSetColor   (TX_BLACK);
             txSelectFont ("Times New Roman", 25);
-            txTextOut    (10, 565, "Почему же Лис меня не заметил?");
+            txTextOut    (10, 565, "ГЏГ®Г·ГҐГ¬Гі Г¦ГҐ Г‹ГЁГ± Г¬ГҐГ­Гї Г­ГҐ Г§Г Г¬ГҐГІГЁГ«?");
             }
         txSleep (20);
         }
@@ -241,7 +241,7 @@ void EpisodeLast   ()
             {
             txSetColor   (TX_BLACK);
             txSelectFont ("Times New Roman", 25);
-            txTextOut    (10, 565, "Вот чудеса! Я словно снег, и меня никто не видит");
+            txTextOut    (10, 565, "Г‚Г®ГІ Г·ГіГ¤ГҐГ±Г ! Гџ Г±Г«Г®ГўГ­Г® Г±Г­ГҐГЈ, ГЁ Г¬ГҐГ­Гї Г­ГЁГЄГІГ® Г­ГҐ ГўГЁГ¤ГЁГІ");
             }
         txSleep (20);
         }
@@ -354,12 +354,12 @@ void TitlesBegin()
         txClear();
         txSetColor (TX_GREEN);
         txSelectFont ("Monotype Corsiva", 80);
-        txTextOut (1000 - 13*t, 100, "Сказка о грустном Зайчонке");
+        txTextOut (1000 - 13*t, 100, "Г‘ГЄГ Г§ГЄГ  Г® ГЈГ°ГіГ±ГІГ­Г®Г¬ Г‡Г Г©Г·Г®Г­ГЄГҐ");
         txSetColor (TX_BLACK);
         txSelectFont ("Comic Sans MS", 30);
-        txTextOut (100, 600 - 5*t, "Жил в лесу грустный Зайчонок.");
-        txTextOut (100, 650 - 5*t, "Он считал, что природа наградила всех зверей чудесным даром.");
-        txTextOut (100, 700 - 5*t, "И этого дара не было только у него...");
+        txTextOut (100, 600 - 5*t, "Г†ГЁГ« Гў Г«ГҐГ±Гі ГЈГ°ГіГ±ГІГ­Г»Г© Г‡Г Г©Г·Г®Г­Г®ГЄ.");
+        txTextOut (100, 650 - 5*t, "ГЋГ­ Г±Г·ГЁГІГ Г«, Г·ГІГ® ГЇГ°ГЁГ°Г®Г¤Г  Г­Г ГЈГ°Г Г¤ГЁГ«Г  ГўГ±ГҐГµ Г§ГўГҐГ°ГҐГ© Г·ГіГ¤ГҐГ±Г­Г»Г¬ Г¤Г Г°Г®Г¬.");
+        txTextOut (100, 700 - 5*t, "Г€ ГЅГІГ®ГЈГ® Г¤Г Г°Г  Г­ГҐ ГЎГ»Г«Г® ГІГ®Г«ГјГЄГ® Гі Г­ГҐГЈГ®...");
         t++;
         txSleep (50);
         }
@@ -379,7 +379,7 @@ void TitlesMiddle()
         {
         txClear();
         txSelectFont ("Times New Roman", 50);
-        txTextOut    (500, 250, "Однажды зимним утром...");
+        txTextOut    (500, 250, "ГЋГ¤Г­Г Г¦Г¤Г» Г§ГЁГ¬Г­ГЁГ¬ ГіГІГ°Г®Г¬...");
         txSleep      (50);
         t++ ;
         }
@@ -399,10 +399,10 @@ void TitlesEnd()
         {
         txClear();
         txSelectFont ("Comic Sans MS", 30);
-        txTextOut    (50, 600 - 5*t, "С тех пор Зайчонок больше никогда не грустил...");
+        txTextOut    (50, 600 - 5*t, "Г‘ ГІГҐГµ ГЇГ®Г° Г‡Г Г©Г·Г®Г­Г®ГЄ ГЎГ®Г«ГјГёГҐ Г­ГЁГЄГ®ГЈГ¤Г  Г­ГҐ ГЈГ°ГіГ±ГІГЁГ«...");
 
         txSelectFont ("Times New Roman", 20);
-        txTextOut    (550, 550, "Титеева Лариса Рамазановна. г.Мегион");
+        txTextOut    (550, 550, "Г’ГЁГІГҐГҐГўГ  Г‹Г Г°ГЁГ±Г  ГђГ Г¬Г Г§Г Г­Г®ГўГ­Г . ГЈ.ГЊГҐГЈГЁГ®Г­");
 
         txSleep (50);
         t++;
