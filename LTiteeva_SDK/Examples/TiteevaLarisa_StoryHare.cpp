@@ -97,11 +97,11 @@ void EpisodeTwo   ()
         HareDraw       (480, 480, 0.5, 40, (t/20) % 2 * 4, 0, TX_LIGHTGRAY, 0);
 
         if (t >= 150)
-        {
-        txSetColor     (TX_BLACK);
-        txSelectFont   ("Times New Roman", 25);
-        txTextOut      (10, 565, "Áåëêè óìåþò ïðûãàòü ïî äåðåâüÿì");
-        }
+            {
+            txSetColor     (TX_BLACK);
+            txSelectFont   ("Times New Roman", 25);
+            txTextOut      (10, 565, "Áåëêè óìåþò ïðûãàòü ïî äåðåâüÿì");
+            }
         txSleep (20);
         }
     }
@@ -137,11 +137,11 @@ void EpisodeThree   ()
 
         HareDraw       (480, 480, 0.5, 0, 0, 0, TX_LIGHTGRAY, 0);
         if (t >= 150)
-        {
-        txSetColor   (TX_BLACK);
-        txSelectFont ("Times New Roman", 25);
-        txTextOut    (10, 565, "Ñîâû ìîãóò âèäåòü íî÷üþ");
-        }
+            {
+            txSetColor   (TX_BLACK);
+            txSelectFont ("Times New Roman", 25);
+            txTextOut    (10, 565, "Ñîâû ìîãóò âèäåòü íî÷üþ");
+            }
 
         txSleep (20);
         }
@@ -235,7 +235,6 @@ void EpisodeLast   ()
         FirDraw        (797, 131, 1,    0, (t % 40) - 20,  0);
 
         HareDraw       (480 + t, 480 + (t/10 % 2) * 10, 0.5, 40, 0, 0, TX_WHITE, t/80);
-
 
         if (t >= 150)
             {
