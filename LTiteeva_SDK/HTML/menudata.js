@@ -27,5 +27,25 @@ var menudata={children:[
 {text:"Файлы",url:"files.html",children:[
 {text:"Файлы",url:"files.html"},
 {text:"Список членов всех файлов",url:"globals.html",children:[
-{text:"Указатель",url:"globals.html"},
-{text:"Функции",url:"globals_func.html"}]}]}]}
+{text:"Указатель",url:"globals.html",children:[
+{text:"b",url:"globals.html#index_b"},
+{text:"c",url:"globals.html#index_c"},
+{text:"e",url:"globals.html#index_e"},
+{text:"f",url:"globals.html#index_f"},
+{text:"h",url:"globals.html#index_h"},
+{text:"m",url:"globals.html#index_m"},
+{text:"o",url:"globals.html#index_o"},
+{text:"p",url:"globals.html#index_p"},
+{text:"s",url:"globals.html#index_s"},
+{text:"t",url:"globals.html#index_t"}]},
+{text:"Функции",url:"globals_func.html",children:[
+{text:"b",url:"globals_func.html#index_b"},
+{text:"c",url:"globals_func.html#index_c"},
+{text:"e",url:"globals_func.html#index_e"},
+{text:"f",url:"globals_func.html#index_f"},
+{text:"h",url:"globals_func.html#index_h"},
+{text:"m",url:"globals_func.html#index_m"},
+{text:"o",url:"globals_func.html#index_o"},
+{text:"p",url:"globals_func.html#index_p"},
+{text:"s",url:"globals_func.html#index_s"},
+{text:"t",url:"globals_func.html#index_t"}]}]}]}]}
