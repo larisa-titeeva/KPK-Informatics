@@ -48,8 +48,8 @@ void SceneBang  ()
 
     for (int t = 0; t < 250; t += 1)
         {
+        txSetFillColor (TX_BLACK);
         txClear ();
-
         DrawStarBang (500, 300, t/2 * 5, t/2 * 5, TX_YELLOW);
 
         DrawStarNew (400 - 2*t, 300 + 2*t, ROUND (0.7 * t), TX_YELLOW);
@@ -73,10 +73,15 @@ void SceneBang  ()
         if (t > 110)
             {
             Bang (550 - t/2,  50 + t/4, 546 - t/2,  54 + t/4, "Bang!!!", 30 + t, 0, TX_ORANGE, TX_BROWN);
+
+            DrawStarNew (500, ROUND (300 + 0.5*t), ROUND (4 * (t - 110)),   TX_LIGHTBLUE);
+            DrawStarNew (500, ROUND (310 + 0.2*t), ROUND (1.5 * (t - 110)), TX_LIGHTGREEN);
+
+            Bang (490 - t/2,  ROUND (290 + 0.5*t), 486 - t/2,  ROUND (294 + 0.5*t), "Earth", ROUND (0.5 * t), 0, TX_ORANGE, TX_BROWN);
+            txSetFillColor (TX_BLACK);
             }
 
-        DrawStarNew (500, ROUND (300 + 0.5*t), ROUND (0.9 * t), TX_LIGHTBLUE);
-        DrawStarNew (500, ROUND (295 + 0.2*t), ROUND (0.4 * t), TX_LIGHTGREEN);
+
 
         txSleep  (20);
         }
@@ -107,26 +112,42 @@ void SceneBang  ()
 
         if (t > 50)
             {
-            DrawTree  ( 50, 350, -1, -1, 0);
-            DrawGrass (400, 400, 1, 1, 0);
+            DrawStarNew (250, 150, 30, TX_YELLOW);
+            DrawGrass (400, 400,  1,  1, (t/30 % 2 * 2 - 1) * 10);
             }
 
         if (t > 100)
             {
-            DrawGrass   (400, 400, 1, 1, 0);
-            DrawStarNew (250, 150, 20, TX_YELLOW);
+            DrawGrass   (400, 400, 1, 1, (t/30 % 2 * 2 - 1) * 10);
             }
 
         if (t > 150)
             {
-            DrawTree  (600, 500, -3, -2, 0);
-            DrawGrass (850, 400, 1, 1, 0);
-            DrawGrass (800, 480, 1, 1, 0);
+            DrawTree  (740, 500, -5, -10, (t/30 % 2 * 2 - 1) * 10);
             }
+
         if (t > 200)
             {
-            DrawGrass (50, 350, 1, 1, 0);
-            DrawTree  (400, 300, -4, -5, 0);
+            DrawGrass ( 50, 350,  1,  1, (t/30 % 2 * 2 - 1) * 10);
+            DrawTree  (400, 300, -4, -5, (t/30 % 2 * 2 - 1) * 10);
+            }
+
+        if (t > 250)
+            {
+            DrawGrass (850, 400,  1,  1, (t/30 % 2 * 2 - 1) * 10);
+            }
+
+        if (t > 300)
+            {
+            DrawTree  (600, 500, -3, -2, (t/30 % 2 * 2 - 1) * 10);
+            }
+        if (t > 350)
+            {
+            DrawTree  ( 50, 350, -1, -1, (t/30 % 2 * 2 - 1) * 10);
+            }
+        if (t > 400)
+            {
+            DrawGrass (800, 480,  1,   1, (t/30 % 2 * 2 - 1) * 10);
             }
 
         txSleep  (10);
