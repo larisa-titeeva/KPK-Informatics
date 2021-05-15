@@ -112,8 +112,7 @@ void SceneBang  ()
 
         if (t > 50)
             {
-            DrawStarNew (250, 150, 30, TX_YELLOW);
-            DrawGrass (400, 400,  1,  1, (t/30 % 2 * 2 - 1) * 10);
+            DrawStarNew (250, 150, (t/80 % 2 * 2 + 1) *10, TX_YELLOW);
             }
 
         if (t > 100)
@@ -144,6 +143,7 @@ void SceneBang  ()
         if (t > 350)
             {
             DrawTree  ( 50, 350, -1, -1, (t/30 % 2 * 2 - 1) * 10);
+            DrawGrass (400, 400,  1,  1, (t/30 % 2 * 2 - 1) * 10);
             }
         if (t > 400)
             {
