@@ -1,6 +1,6 @@
 #include "TXLib.h"
-#include "TiteevaLarisa.h"
-#include "BelskaiaEvgeniia.h"
+#include "LTiteeva_SDK/LTiteeva_Lib.h"
+#include "Include/BelskaiaEvgeniia.h"
 
 void SceneBang      ();
 void TitlesBegin    ();
@@ -44,7 +44,7 @@ int main()
 
 void SceneBang  ()
     {
-    txPlaySound ("sound/Big_Bang_Theory.wav");
+    txPlaySound ("LTiteeva_SDK/sound/Big_Bang_Theory.wav");
 
     for (int t = 0; t < 250; t += 1)
         {
@@ -85,8 +85,8 @@ void SceneBang  ()
         {
         txClear ();
 
-        DrawCat  (800, 300 - 1.5*t, t/100 % 5, t/100 % 2, 2, 2, -(t/20 % 2) * 3 + 3, -(t/100 % 2) * 3 + 3, t/150 % 4, t/150 % 4, (t/10 % 2) *7, 7  - (t/10 % 2) *7, t/20 % 2, TX_ORANGE,    TX_RED, TX_BLACK, TX_BLUE);
-        DrawCat  (200, 300 + 1.5*t, t/100 % 5, t/200 % 2, 2, 2, -(t/20 % 2) * 3 + 3, -(t/100 % 2) * 3 + 3, t/150 % 4, t/150 % 4, (t/10 % 2) *7, 7  - (t/10 % 2) *7, t/20 % 2, TX_LIGHTGRAY, TX_RED, TX_BLACK, TX_GREEN);
+        DrawCat  (800, ROUND (300 - 1.5*t), t/100 % 5, t/100 % 2, 2, 2, -(t/20 % 2) * 3 + 3, -(t/100 % 2) * 3 + 3, t/150 % 4, t/150 % 4, (t/10 % 2) *7, 7  - (t/10 % 2) *7, t/20 % 2, TX_ORANGE,    TX_RED, TX_BLACK, TX_BLUE);
+        DrawCat  (200, ROUND (300 + 1.5*t), t/100 % 5, t/200 % 2, 2, 2, -(t/20 % 2) * 3 + 3, -(t/100 % 2) * 3 + 3, t/150 % 4, t/150 % 4, (t/10 % 2) *7, 7  - (t/10 % 2) *7, t/20 % 2, TX_LIGHTGRAY, TX_RED, TX_BLACK, TX_GREEN);
 
         Bang     (200, 300, 196,  304, "No, that's not what happened!", 60, 0, TX_ORANGE, TX_RED);
 
@@ -99,8 +99,8 @@ void SceneBang  ()
 
         Bang (450, 500, 446,  504, "It's magic!", 40, 0, TX_BLUE, TX_GRAY);
 
-        DrawStarBang (800, 200, t%2 * 0.5, t%2 * 5, TX_YELLOW);
-        DrawStarBang (200, 500, t%2 * 0.5, t%2 * 5, TX_YELLOW);
+        DrawStarBang (800, 200, ROUND (t%2 * 0.5), t%2 * 5, TX_YELLOW);
+        DrawStarBang (200, 500, ROUND (t%2 * 0.5), t%2 * 5, TX_YELLOW);
 
         DrawCat  (800, 150, t/100 % 5, t/100 % 2, 2, 2, -(t/20 % 2) * 3 + 3, -(t/100 % 2) * 3 + 3, t/150 % 4, t/150 % 4, (t/100 % 2) *20, 0,                    t/20 % 2, TX_ORANGE,    TX_RED, TX_BLACK, TX_BLUE);
         DrawCat  (200, 450, t/100 % 5, t/100 % 2, 2, 2, -(t/20 % 2) * 3 + 3, -(t/100 % 2) * 3 + 3, t/150 % 4, t/150 % 4, 0,              20  - (t/100 % 2) *20, t/20 % 2, TX_LIGHTGRAY, TX_RED, TX_BLACK, TX_GREEN);
@@ -138,7 +138,7 @@ void SceneBang  ()
 //-----------------------------------------------------------------------------
 void EpisodeOne ()
     {
-    txPlaySound ("sound/summer.wav");
+    txPlaySound ("LTiteeva_SDK/sound/summer.wav");
 
     for (int t = 0; t < 480; t += 1)
         {
@@ -185,7 +185,7 @@ void EpisodeOne ()
 
 void EpisodeTwo   ()
     {
-    txPlaySound ("sound/owl.wav");
+    txPlaySound ("LTiteeva_SDK/sound/owl.wav");
     for (int t = 0; t < 480; t += 1)
         {
         BackgroundDraw_Summer (0, 0);
@@ -231,7 +231,7 @@ void EpisodeTwo   ()
 
 void EpisodeThree   ()
     {
-    txPlaySound ("sound/night.wav");
+    txPlaySound ("LTiteeva_SDK/sound/night.wav");
 
     for (int t = 0; t < 480; t += 1)
         {
@@ -280,7 +280,7 @@ void EpisodeThree   ()
 
 void EpisodeFour   ()
     {
-    txPlaySound ("sound/bird.wav");
+    txPlaySound ("LTiteeva_SDK/sound/bird.wav");
 
     for (int t = 0; t < 480; t += 1)
         {
@@ -327,7 +327,7 @@ void EpisodeFour   ()
 
 void EpisodeFive   ()
     {
-    txPlaySound ("sound/winter.wav");
+    txPlaySound ("LTiteeva_SDK/sound/winter.wav");
 
     for (int t = 0; t < 480; t += 1)
         {
